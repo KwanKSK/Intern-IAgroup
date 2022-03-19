@@ -1,0 +1,8 @@
+<%- include('./partials/header.ejs') %>
+    <h1>Verify citizen card</h1>
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+        id="idCard" placeholder="Enter Citizen ID" minlength="13" maxlength="13" required>
+    <button onclick="VerifyID()">Verify</button>   
+
+    <p> Verify: <span id="verify"></span></p>
+<%- include('./partials/footer.ejs') %>
